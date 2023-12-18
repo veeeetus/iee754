@@ -82,9 +82,9 @@ def convert(number, precision):
         return f"{exponent} {mantissa}"
 
 def begin():
+    precision = int(input("Tutaj wpisz tryb precyzji do wyboru są 32 lub 64 czyli single lub double precision: "))
     whole = int(input("Tutaj wpisz część całkowitą liczby dodatnią lub ujemną: "))
     dec = float(input("Tutaj wpisz część ułamkową liczby w postaci 0.** np 0.125: "))
-    precision = int(input("Tutaj wpisz tryb precyzji do wyboru są 32 lub 64 czyli single lub double precision: "))
     answer = f"{firstBit(whole)} {(convert(wholeToBin(abs(whole)) + '.' + decToBin(dec), precision))}"
     print(f"1: format(znak; eksponent; mantysa): {answer}\n2: format(cała liczba zapisana ciągiem): {answer.replace(' ', '')}")
 
